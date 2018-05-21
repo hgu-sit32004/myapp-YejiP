@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EmF-uU-gC3">
-                                <rect key="frame" x="0.0" y="168" width="375" height="499"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EmF-uU-gC3">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="15" id="v2j-rH-33Y">
                                     <size key="itemSize" width="170" height="170"/>
@@ -73,12 +73,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="8tQ-f9-Mb1" kind="show" identifier="toDashBoard" id="C9a-qC-EnE"/>
+                        <segue destination="8tQ-f9-Mb1" kind="show" id="CqT-v4-zOX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.199999999999999" y="70.614692653673174"/>
+            <point key="canvasLocation" x="-822" y="32"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="nZF-e6-HPF">
@@ -97,18 +97,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fBb-1Y-iu1"/>
                     </view>
-                    <connections>
-                        <outlet property="pageview" destination="hGp-ma-WPU" id="mrS-N3-zoW"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Gs-Zb-DVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709.60000000000002" y="70.614692653673174"/>
+            <point key="canvasLocation" x="103" y="32"/>
         </scene>
-        <!--View Controller-->
+        <!--Page View-->
         <scene sceneID="CgV-hU-GlT">
             <objects>
-                <viewController id="nfM-n8-hCn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageViewVC" id="nfM-n8-hCn" customClass="PageView" customModule="visionboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jWE-b4-f9o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5a-a5-vCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="99"/>
+            <point key="canvasLocation" x="900" y="32"/>
         </scene>
     </scenes>
     <resources>

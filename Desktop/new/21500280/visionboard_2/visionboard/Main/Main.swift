@@ -11,7 +11,7 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
     //MARK: - collectionview
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        return 3
     
     }
     
@@ -26,7 +26,8 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "toDashBoard", sender: self)
+        print("cell")
+        self.performSegue(withIdentifier: "toDashBoard" , sender: self)
     }
     //collectionview end
 
