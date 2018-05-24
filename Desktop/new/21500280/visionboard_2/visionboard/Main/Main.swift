@@ -26,8 +26,7 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("cell")
-        self.performSegue(withIdentifier: "toDashBoard" , sender: self)
+        self.performSegue(withIdentifier: "todash" , sender: self)
     }
     //collectionview end
 

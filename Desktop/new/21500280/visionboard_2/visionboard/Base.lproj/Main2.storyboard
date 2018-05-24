@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="-822" y="32"/>
         </scene>
-        <!--Dash Board-->
+        <!--Dashboard-->
         <scene sceneID="nZF-e6-HPF">
             <objects>
-                <viewController id="8tQ-f9-Mb1" customClass="DashBoard" customModule="visionboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8tQ-f9-Mb1" customClass="Dashboard" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S7f-XR-5WV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,28 +97,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fBb-1Y-iu1"/>
                     </view>
-                    <connections>
-                        <outlet property="PageView" destination="hGp-ma-WPU" id="hYd-u0-ikJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Gs-Zb-DVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="103" y="32"/>
-        </scene>
-        <!--Page View-->
-        <scene sceneID="LNd-Ba-Qqe">
-            <objects>
-                <viewController storyboardIdentifier="PageViewVC" id="sPD-gF-0Pl" customClass="PageView" customModule="visionboard" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="O0E-Dd-6Rd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="0.24513056506849315" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="lhv-4G-Nc0"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5b9-Kd-At7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="913" y="32"/>
         </scene>
     </scenes>
     <resources>
