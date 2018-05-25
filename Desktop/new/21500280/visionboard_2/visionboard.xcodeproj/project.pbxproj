@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA01AB2A20B6DE0300DA64EF /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA01AB2820B6DE0300DA64EF /* Main2.storyboard */; };
 		CAA8096220AE9210000EE966 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8096120AE9210000EE966 /* AppDelegate.swift */; };
 		CAA8096420AE9210000EE966 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8096320AE9210000EE966 /* Main.swift */; };
 		CAA8096720AE9210000EE966 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA8096520AE9210000EE966 /* Main.storyboard */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CA01AB2920B6DE0300DA64EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = visionboard/Base.lproj/Main2.storyboard; sourceTree = "<group>"; };
 		CAA8095E20AE9210000EE966 /* visionboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = visionboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA8096120AE9210000EE966 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAA8096320AE9210000EE966 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 		CAA8095520AE9210000EE966 = {
 			isa = PBXGroup;
 			children = (
-				CA01AB2820B6DE0300DA64EF /* Main2.storyboard */,
 				CAA8096020AE9210000EE966 /* visionboard */,
 				CAA8095F20AE9210000EE966 /* Products */,
 			);
@@ -184,7 +181,6 @@
 				CAA8098220AEA4FF000EE966 /* 1.jpg in Resources */,
 				CAA8098320AEA4FF000EE966 /* 2.jpg in Resources */,
 				CAA8096920AE9211000EE966 /* Assets.xcassets in Resources */,
-				CA01AB2A20B6DE0300DA64EF /* Main2.storyboard in Resources */,
 				CAA8096720AE9210000EE966 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,14 +203,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CA01AB2820B6DE0300DA64EF /* Main2.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA01AB2920B6DE0300DA64EF /* Base */,
-			);
-			name = Main2.storyboard;
-			sourceTree = "<group>";
-		};
 		CAA8096520AE9210000EE966 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

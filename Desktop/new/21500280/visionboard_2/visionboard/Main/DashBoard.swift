@@ -12,8 +12,9 @@ class DashBoard: UIViewController {
         
         let PageViewVC = self.storyboard?.instantiateViewController(withIdentifier: "PageViewVC") as! PageView
         PageViewVC.view.frame = PageView.bounds
-        PageView.addSubview(PageViewVC)
-        PageViewVC.didMove(didMove(toParentViewController: self))
+        PageView.addSubview(PageViewVC.view)
+        addChildViewController(PageViewVC)
+        PageViewVC.didMove(toParentViewController: self)
        
     }
 
