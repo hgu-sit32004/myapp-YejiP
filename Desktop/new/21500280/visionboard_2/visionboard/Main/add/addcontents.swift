@@ -25,4 +25,13 @@ class addcontents: UIViewController, UIImagePickerControllerDelegate,UINavigatio
     
     dismiss(animated: true, completion: nil)
     }
+    
+    
+    @IBAction func save(_ sender: Any) {
+        //UserDefaults.standard.set  ??
+        
+        
+    }
+    
+    
 }
