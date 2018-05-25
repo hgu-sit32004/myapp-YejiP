@@ -18,6 +18,7 @@
 		CAA8098220AEA4FF000EE966 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAA8098020AEA4FF000EE966 /* 1.jpg */; };
 		CAA8098320AEA4FF000EE966 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CAA8098120AEA4FF000EE966 /* 2.jpg */; };
 		CAA8098820AEADA7000EE966 /* DashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8098720AEADA7000EE966 /* DashBoard.swift */; };
+		CAEA66FD20B7DC740043C5A6 /* addcontents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEA66FC20B7DC740043C5A6 /* addcontents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CAA8098020AEA4FF000EE966 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../../../../../1.jpg; sourceTree = "<group>"; };
 		CAA8098120AEA4FF000EE966 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = ../../../../../2.jpg; sourceTree = "<group>"; };
 		CAA8098720AEADA7000EE966 /* DashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DashBoard.swift; path = ../DashBoard.swift; sourceTree = "<group>"; };
+		CAEA66FC20B7DC740043C5A6 /* addcontents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addcontents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +79,6 @@
 				CAA8096520AE9210000EE966 /* Main.storyboard */,
 				CAA8096120AE9210000EE966 /* AppDelegate.swift */,
 				CAA8097820AE9C53000EE966 /* Main */,
-				CA034C0920B2D96900C0F504 /* Page */,
 				CAA8097720AE9C35000EE966 /* supportingfile */,
 				CAA8096820AE9211000EE966 /* Assets.xcassets */,
 				CAA8096A20AE9211000EE966 /* LaunchScreen.storyboard */,
@@ -101,6 +102,8 @@
 				CAA8096320AE9210000EE966 /* Main.swift */,
 				CAA8097320AE999C000EE966 /* MainCell.swift */,
 				CAA8098420AEAB27000EE966 /* dashbord */,
+				CA034C0920B2D96900C0F504 /* Page */,
+				CAEA66FB20B7DC180043C5A6 /* add */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -120,6 +123,14 @@
 				CAA8098720AEADA7000EE966 /* DashBoard.swift */,
 			);
 			path = dashbord;
+			sourceTree = "<group>";
+		};
+		CAEA66FB20B7DC180043C5A6 /* add */ = {
+			isa = PBXGroup;
+			children = (
+				CAEA66FC20B7DC740043C5A6 /* addcontents.swift */,
+			);
+			path = add;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +168,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CAA8095920AE9210000EE966 /* Build configuration list for PBXProject "visionboard 복사본" */;
+			buildConfigurationList = CAA8095920AE9210000EE966 /* Build configuration list for PBXProject "visionboard_2" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -199,6 +210,7 @@
 				CA01AB2C20B6E12C00DA64EF /* PageView.swift in Sources */,
 				CAA8096220AE9210000EE966 /* AppDelegate.swift in Sources */,
 				CAA8098820AEADA7000EE966 /* DashBoard.swift in Sources */,
+				CAEA66FD20B7DC740043C5A6 /* addcontents.swift in Sources */,
 				CAA8097420AE999C000EE966 /* MainCell.swift in Sources */,
 				CAA8097620AE9B9C000EE966 /* Supporting File.swift in Sources */,
 			);
@@ -377,7 +389,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CAA8095920AE9210000EE966 /* Build configuration list for PBXProject "visionboard 복사본" */ = {
+		CAA8095920AE9210000EE966 /* Build configuration list for PBXProject "visionboard_2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAA8096E20AE9211000EE966 /* Debug */,
