@@ -11,7 +11,7 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
     //MARK: - collectionview
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        return 4
     
     }
     
@@ -19,9 +19,9 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
         let Cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MainCell
         
         let TitleImageaName = Data[indexPath.row]["TitleImage"]
-        let TitleImage = UIImage(named: TitleImageaName!)
+        let TitleImage = UIImage(named: TitleImageaName! as! String)
         Cell.TitleImageView.image = TitleImage
-        Cell.TitleLabel.text = Data[indexPath.row]["TitleLabel"]
+        Cell.TitleLabel.text = Data[indexPath.row]["TitleLabel"] as? String
         return Cell
     }
     
