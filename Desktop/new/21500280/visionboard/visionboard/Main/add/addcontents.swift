@@ -8,7 +8,7 @@ class addcontents: UIViewController, UIImagePickerControllerDelegate,UINavigatio
     @IBOutlet weak var picname: UITextField!
     @IBOutlet weak var img: UIImageView!
     
-    
+
     let imagepicker = UIImagePickerController()
     
     @IBAction func btn_pick(_ sender: Any) {
@@ -23,9 +23,13 @@ class addcontents: UIViewController, UIImagePickerControllerDelegate,UINavigatio
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             img.image = image
             
+            
     }
         dismiss(animated: true, completion:nil)}
-  
+ 
+    
+    
+    
     func saveImageDocumentDirectory(){
         let fileManager = FileManager.default
         
@@ -35,7 +39,10 @@ class addcontents: UIViewController, UIImagePickerControllerDelegate,UINavigatio
         let imageData = UIImageJPEGRepresentation(image!, 0.5)
         fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
         
-        Data.append(["TitleImage" : paths, "TitleLabel" : picname.text, "DATE" : 20180501])
+        
+        Data.append(["TitleImage" : paths, "TitleLabel" : picname.text! , "DATE" : 20180501])
+        picname.text = Data[1]["TitleImage"] as! String
+
         //Data[0]["TitleImage"] = paths
     }
  /*
@@ -56,8 +63,19 @@ class addcontents: UIViewController, UIImagePickerControllerDelegate,UINavigatio
     }
     
    */
+    
+    func save(){
+        UserDefaults.standard.set( Data , forKey: "savedData")
+    }
+    
+    
+    
+    
     @IBAction func save(_ sender: Any) {
         saveImageDocumentDirectory()
+        save()
+
+        
     }
     
 }

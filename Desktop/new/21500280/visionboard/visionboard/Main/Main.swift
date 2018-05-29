@@ -2,7 +2,7 @@
 import UIKit
 
 class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSource {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -10,10 +10,12 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
     
     //MARK: - collectionview
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+        load()
         return Data.count
     
     }
+    
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let Cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MainCell
@@ -24,11 +26,21 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
         Cell.TitleLabel.text = Data[indexPath.row]["TitleLabel"] as? String
         return Cell
     }
+
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "todash" , sender: self)
     }
-    //collectionview end
 
+    func load(){
+        if let savedData:[[String : Any]] = UserDefaults.standard.value(forKey: "savedData") as? [[String : Any]] {
+            Data = savedData
+        }
+    }
+    
+    
+    
+    //collectionview end
 }
 
