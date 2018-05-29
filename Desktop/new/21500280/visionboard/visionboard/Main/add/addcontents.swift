@@ -24,10 +24,30 @@ class addcontents: UIViewController, UIImagePickerControllerDelegate,UINavigatio
             img.image = image
     }
         dismiss(animated: true, completion:nil)}
-
-    
-
-    @IBAction func save(_ sender: Any) {
-        
+  
+    func saveImageDocumentDirectory(){
+        let fileManager = FileManager.default
+        let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(picname.text!)
+        let image = img.image
+        let imageData = UIImageJPEGRepresentation(image!, 0.5)
+        fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
     }
+    
+    
+    @IBAction func save(_ sender: Any) {
+        saveImageDocumentDirectory()
+    }
+    
 }
+
+
+/*       let img = UIImage(named: picname.text!)
+let data = UIImagePNGRepresentation(img!)
+UserDefaults.standard.set(data, forKey: "image")
+var retrievedImage = UserDefaults.standard.object(forKey: "image") as AnyObject
+
+
+UserDefaults.standard.synchronize()
+NSLog("Image stored?")
+viewDidLoad()
+*/
