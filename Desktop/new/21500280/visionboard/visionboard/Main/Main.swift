@@ -11,7 +11,7 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
     //MARK: - collectionview
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 4
+        return Data.count
     
     }
     
