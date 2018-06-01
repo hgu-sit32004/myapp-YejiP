@@ -73,7 +73,7 @@
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="guF-Ht-NEx" kind="show" id="rV3-wi-RX8"/>
+                                    <segue destination="guF-Ht-NEx" kind="show" id="PAd-wT-BCd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -133,8 +133,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="save"/>
                                 <connections>
-                                    <action selector="save:" destination="guF-Ht-NEx" eventType="touchUpInside" id="vBi-FX-GgZ"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="j3e-t6-SHT"/>
+                                    <action selector="buttonsave:" destination="guF-Ht-NEx" eventType="touchUpInside" id="XJP-8m-jfc"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="I1K-Ss-VV5"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="img" translatesAutoresizingMaskIntoConstraints="NO" id="hJO-jw-cES">
@@ -236,6 +236,6 @@
         <image name="1.jpg" width="360" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="j3e-t6-SHT"/>
+        <segue reference="rGq-h1-0ch"/>
     </inferredMetricsTieBreakers>
 </document>

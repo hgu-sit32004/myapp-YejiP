@@ -22,61 +22,37 @@ class addcontents: UIViewController, UIImagePickerControllerDelegate,UINavigatio
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             img.image = image
-            
-            
     }
         dismiss(animated: true, completion:nil)}
- 
+
     
     
     
     func saveImageDocumentDirectory(){
         let fileManager = FileManager.default
         
-        let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory , .userDomainMask, true)[0] as NSString).appendingPathComponent(picname.text!)
+        let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory , .userDomainMask, true)[0] as NSString).appendingPathComponent(picname.text!+".png")
         //let filepath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let image = img.image
         let imageData = UIImageJPEGRepresentation(image!, 0.5)
         fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
         
+        Data.append(goal(ggimage: paths, ggtitle: picname.text!, ggdate: 20180501))
         
-        Data.append(["TitleImage" : paths, "TitleLabel" : picname.text! , "DATE" : 20180501])
-        picname.text = Data[1]["TitleImage"] as! String
+    }
+    
 
-        //Data[0]["TitleImage"] = paths
-    }
- /*
-    func getDirectoryPath() -> String {
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
-        return documentsDirectory
-    }
-    
-    func getImage(){
-        let fileManager = FileManager.defaultManager
-        let imagePAth = (self.getDirectoryPath() as NSString).appendingPathComponent("apple.jpg")
-        if fileManager.fileExistsAtPath(imagePAth){
-            self.imagepicker.image = UIImage(contentsOfFile: imagePAth)
-        }else{
-            print("No Image")
-        }
-    }
-    
-   */
     
     func save(){
         UserDefaults.standard.set( Data , forKey: "savedData")
     }
     
     
-    
-    
-    @IBAction func save(_ sender: Any) {
+    @IBAction func buttonsave(_ sender: Any) {
         saveImageDocumentDirectory()
         save()
-
-        
     }
+    
     
 }
 
