@@ -33,6 +33,7 @@ class addcontents: UIViewController, UIImagePickerControllerDelegate,UINavigatio
         let image = img.image
         let imageData = UIImageJPEGRepresentation(image!, 0.5)
         fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
+        
         Data.append(goal(ggimage: paths, ggtitle: picname.text!, ggdate: 20180501))}
     
     func save(){

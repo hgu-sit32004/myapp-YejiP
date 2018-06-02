@@ -24,12 +24,12 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let Cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MainCell
-        let TitleImageaName = (Data[indexPath.row] ).gimage
+        let TitleImageaName = Data[indexPath.row].gimage
         let TitleImage = UIImage(named: TitleImageaName)
         
         Cell.TitleImageView.image = TitleImage
         Cell.TitleLabel.text = (Data[indexPath.row] ).gtitle
-    
+
         return Cell
     }
 
