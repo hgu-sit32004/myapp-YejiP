@@ -28,7 +28,8 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
         let TitleImage = UIImage(named: TitleImageaName)
         
         Cell.TitleImageView.image = TitleImage
-        Cell.TitleLabel.text = (Data[indexPath.row] ).gtitle
+        Cell.TitleLabel.text = (Data[indexPath.row] ).gdate
+ //       Cell.TitleLabel.text = (Data[indexPath.row] ).gtitle
 
         return Cell
     }
