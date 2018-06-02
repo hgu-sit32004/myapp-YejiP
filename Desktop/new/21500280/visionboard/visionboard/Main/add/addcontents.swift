@@ -26,35 +26,27 @@ class addcontents: UIViewController, UIImagePickerControllerDelegate,UINavigatio
         dismiss(animated: true, completion:nil)}
 
     
-    
-    
     func saveImageDocumentDirectory(){
         let fileManager = FileManager.default
-        
         let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory , .userDomainMask, true)[0] as NSString).appendingPathComponent(picname.text!+".png")
         //let filepath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let image = img.image
         let imageData = UIImageJPEGRepresentation(image!, 0.5)
         fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
-        
-        Data.append(goal(ggimage: paths, ggtitle: picname.text!, ggdate: 20180501))
-        
-    }
-    
-
+        Data.append(goal(ggimage: paths, ggtitle: picname.text!, ggdate: 20180501))}
     
     func save(){
-        UserDefaults.standard.set( Data , forKey: "savedData")
+        UserDefaults.standard.set(try? PropertyListEncoder().encode(Data) , forKey: "savedData")
     }
+
     
-    
-    @IBAction func buttonsave(_ sender: Any) {
+    @IBAction func but(_ sender: UIButton) {
         saveImageDocumentDirectory()
         save()
-    }
-    
-    
 }
+}
+
+
 
 
 /*       let img = UIImage(named: picname.text!)

@@ -133,7 +133,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="save"/>
                                 <connections>
-                                    <action selector="buttonsave:" destination="guF-Ht-NEx" eventType="touchUpInside" id="XJP-8m-jfc"/>
+                                    <action selector="but:" destination="guF-Ht-NEx" eventType="touchUpInside" id="EuP-K8-cho"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="I1K-Ss-VV5"/>
                                 </connections>
                             </button>
@@ -236,6 +236,6 @@
         <image name="1.jpg" width="360" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rGq-h1-0ch"/>
+        <segue reference="I1K-Ss-VV5"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,21 +7,29 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    
+
+    func load(){
+        if let savedData = UserDefaults.standard.object(forKey: "savedData") as? Data {
+            Data = try! PropertyListDecoder().decode([goal].self, from: savedData)
+        }
+    }
+
     //MARK: - collectionview
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         load()
         return Data.count
-    
+        
     }
 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let Cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MainCell
-        let TitleImageaName = Data[indexPath.row].gimage as String?
-        let TitleImage = UIImage(named: TitleImageaName!)
+        let TitleImageaName = (Data[indexPath.row] ).gimage
+        let TitleImage = UIImage(named: TitleImageaName)
+        
         Cell.TitleImageView.image = TitleImage
-        Cell.TitleLabel.text = Data[indexPath.row].gtitle
+        Cell.TitleLabel.text = (Data[indexPath.row] ).gtitle
+    
         return Cell
     }
 
@@ -29,12 +37,7 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
         self.performSegue(withIdentifier: "todash" , sender: self)
     }
 
-    func load(){
-        if let savedData:[goal] = UserDefaults.standard.value(forKey: "savedData") as? [goal] {
-            Data = savedData
-        }
-    }
-    
+
     //collectionview end
 }
 
