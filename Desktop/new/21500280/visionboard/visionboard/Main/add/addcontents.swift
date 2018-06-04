@@ -1,6 +1,11 @@
 import UIKit
 
 class addcontents: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,7 +23,7 @@ class addcontents: UIViewController, UIImagePickerControllerDelegate,UINavigatio
         self.present(imagepicker , animated : true , completion: nil)
     }
 
-    var strdate : String = ""
+    var strdate: String
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
@@ -40,10 +45,10 @@ class addcontents: UIViewController, UIImagePickerControllerDelegate,UINavigatio
         let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory , .userDomainMask, true)[0] as NSString).appendingPathComponent(picname.text!+".png")
         //let filepath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let image = img.image
-        let imageData = UIImageJPEGRepresentation(image!, 0.5)
+        let imageData = UIImageJPEGRepresentation( image! , 0.5)
         fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
         
-        Data.append(goal(ggimage: paths, ggtitle: picname.text!, ggdate: strdate))}
+        Data.append(goal(ggimage: paths , ggtitle: picname.text!, ggdate: strdate))}
     
     func save(){
         UserDefaults.standard.set(try? PropertyListEncoder().encode(Data) , forKey: "savedData")

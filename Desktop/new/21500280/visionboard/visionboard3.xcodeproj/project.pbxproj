@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CA01AB2C20B6E12C00DA64EF /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01AB2B20B6E12C00DA64EF /* PageView.swift */; };
+		CA20209820C554C600A7EF38 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA20209720C554C600A7EF38 /* 1.jpg */; };
 		CAA8096220AE9210000EE966 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8096120AE9210000EE966 /* AppDelegate.swift */; };
 		CAA8096420AE9210000EE966 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8096320AE9210000EE966 /* Main.swift */; };
 		CAA8096720AE9210000EE966 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA8096520AE9210000EE966 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		CA01AB2B20B6E12C00DA64EF /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		CA20209720C554C600A7EF38 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../../../../1.jpg; sourceTree = "<group>"; };
 		CAA8095E20AE9210000EE966 /* visionboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = visionboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA8096120AE9210000EE966 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAA8096320AE9210000EE966 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				CAA8098020AEA4FF000EE966 /* 1.jpg */,
+				CA20209720C554C600A7EF38 /* 1.jpg */,
 				CAA8098120AEA4FF000EE966 /* 2.jpg */,
 			);
 			path = image;
@@ -194,6 +197,7 @@
 				CAA8096C20AE9211000EE966 /* LaunchScreen.storyboard in Resources */,
 				CAA8098220AEA4FF000EE966 /* 1.jpg in Resources */,
 				CAA8098320AEA4FF000EE966 /* 2.jpg in Resources */,
+				CA20209820C554C600A7EF38 /* 1.jpg in Resources */,
 				CAA8096920AE9211000EE966 /* Assets.xcassets in Resources */,
 				CAA8096720AE9210000EE966 /* Main.storyboard in Resources */,
 			);

@@ -9,6 +9,7 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
     }
 
     func load(){
+
         if let savedData = UserDefaults.standard.object(forKey: "savedData") as? Data {
             Data = try! PropertyListDecoder().decode([goal].self, from: savedData)
         }
@@ -28,8 +29,8 @@ class Main: UIViewController, UICollectionViewDelegate ,UICollectionViewDataSour
         let TitleImage = UIImage(named: TitleImageaName)
         
         Cell.TitleImageView.image = TitleImage
-        Cell.TitleLabel.text = (Data[indexPath.row] ).gdate
- //       Cell.TitleLabel.text = (Data[indexPath.row] ).gtitle
+        Cell.TitleLabel.text = (Data[indexPath.row] ).gtitle
+
 
         return Cell
     }
