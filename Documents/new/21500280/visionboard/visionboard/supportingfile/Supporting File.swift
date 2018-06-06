@@ -1,42 +1,45 @@
 import UIKit
+import Foundation
 import UserNotifications
 let calendar = Calendar(identifier:  .gregorian)
 
-var Data = [goal(ggimage: "1.jpg",ggtitle: "1",ggdate: "2015-04-01T11:42"),    ]
-
+//var Data = [goal(ggimage: "1.jpg",ggtitle: "1",ggdate: ),    ]
+var Data = [goal]()
 let dateFormatter = DateFormatter()
 
+}
 
-class goal:Codable{
-    var gimage: String
-    var gtitle: String
-    var gdate: String
+
+
+
+
+
+
+
+
+/*
+class goal : Decodable{
+
     
-    
-    init(ggimage:String , ggtitle:String, ggdate: String) {
-        self.gimage = ggimage
-        self.gtitle = ggtitle
-        self.gdate = ggdate
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
-        dateFormatter.timeZone = NSTimeZone(name: "UTC")! as TimeZone}
-    
-    
-    
+    init (gimage: URL,gtitle:String,gdate:Date){
+        self.gimage = gimage
+        self.gtitle = gtitle
+        self.gdate = gdate
+    }
+
+
     func repeatNotification(){
         let content = UNMutableNotificationContent()
-        content.title = "Pizza Time!!"
-        content.body = "Monday is Pizza Day"
-        content.categoryIdentifier = "pizza.reminder.category"
-        var dateComponents = DateComponents()
-        // a more realistic example for Gregorian calendar. Every Monday at 11:30AM
-        dateComponents.hour = 11
-        dateComponents.minute = 30
-        dateComponents.weekday = 2
-        dateComponents.second = 0
-        let trigger = UNCalendarNotificationTrigger(
-            dateMatching: dateComponents,
-            repeats: true)
-        let request = UNNotificationRequest(identifier: "pizza.reminder", content: content, trigger: trigger)
+        content.title = "vision reminder"
+        content.body = self.gtitle
+        content.categoryIdentifier = self.gtitle
+        //사진 추가
+        
+        
+        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second,], from: self.gdate)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+
+        let request = UNNotificationRequest(identifier: self.gtitle, content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
@@ -49,3 +52,31 @@ class goal:Codable{
 
 }
 
+
+extension goal{
+   
+    enum myclass: String, CodingKey {
+        case gimage = "gimage"
+        case gtitle = "gtitle"
+        case gdate = "gdate"
+    }
+    
+    convenience init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: myclass.self)
+        let gimage = try container.decode(URL.self, forKey: .gimage)
+        let gtitle = try container.decode(String.self, forKey: .gtitle)
+        let gdate = try container.decode(Date.self, forKey: .gdate)
+        self.init(gimage: gimage,gtitle:gtitle,gdate:gdate)
+    }
+
+}*/
+
+
+let json = """
+{
+"gimage": ""
+"gtitle": "hi"
+"gdate": ""
+}
+""".data(using: .utf8)!
+let mystruct = try JSONDecoder().decode(goal.self,from: json)

@@ -44,7 +44,7 @@ class addcontents: UIViewController, UIImagePickerControllerDelegate,UINavigatio
         let imageData = UIImageJPEGRepresentation( image! , 0.5)
         fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil)
         
-        Data.append(goal(ggimage: paths , ggtitle: picname.text!, ggdate: strdate))}
+        Data.append(goal(from: paths, picname.text!, myDatePicker.date))}
     
     func save(){
         UserDefaults.standard.set(try? PropertyListEncoder().encode(Data) , forKey: "savedData")

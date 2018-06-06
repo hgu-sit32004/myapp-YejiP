@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CA01AB2C20B6E12C00DA64EF /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01AB2B20B6E12C00DA64EF /* PageView.swift */; };
+		CA07DC4920C7FE1400517121 /* datamanage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07DC4820C7FE1400517121 /* datamanage.swift */; };
+		CA07DC4B20C7FE4700517121 /* goalitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA07DC4A20C7FE4700517121 /* goalitem.swift */; };
 		CA20209820C554C600A7EF38 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA20209720C554C600A7EF38 /* 1.jpg */; };
 		CAA8096220AE9210000EE966 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8096120AE9210000EE966 /* AppDelegate.swift */; };
 		CAA8096420AE9210000EE966 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8096320AE9210000EE966 /* Main.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		CA01AB2B20B6E12C00DA64EF /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		CA07DC4820C7FE1400517121 /* datamanage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datamanage.swift; sourceTree = "<group>"; };
+		CA07DC4A20C7FE4700517121 /* goalitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = goalitem.swift; sourceTree = "<group>"; };
 		CA20209720C554C600A7EF38 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../../../../1.jpg; sourceTree = "<group>"; };
 		CAA8095E20AE9210000EE966 /* visionboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = visionboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA8096120AE9210000EE966 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 			children = (
 				CAA8096320AE9210000EE966 /* Main.swift */,
 				CAA8097320AE999C000EE966 /* MainCell.swift */,
+				CA07DC4820C7FE1400517121 /* datamanage.swift */,
+				CA07DC4A20C7FE4700517121 /* goalitem.swift */,
 				CAA8098420AEAB27000EE966 /* dashbord */,
 				CA034C0920B2D96900C0F504 /* Page */,
 				CAEA66FB20B7DC180043C5A6 /* add */,
@@ -213,9 +219,11 @@
 				CAA8096420AE9210000EE966 /* Main.swift in Sources */,
 				CA01AB2C20B6E12C00DA64EF /* PageView.swift in Sources */,
 				CAA8096220AE9210000EE966 /* AppDelegate.swift in Sources */,
+				CA07DC4B20C7FE4700517121 /* goalitem.swift in Sources */,
 				CAA8098820AEADA7000EE966 /* DashBoard.swift in Sources */,
 				CAEA66FD20B7DC740043C5A6 /* addcontents.swift in Sources */,
 				CAA8097420AE999C000EE966 /* MainCell.swift in Sources */,
+				CA07DC4920C7FE1400517121 /* datamanage.swift in Sources */,
 				CAA8097620AE9B9C000EE966 /* Supporting File.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
